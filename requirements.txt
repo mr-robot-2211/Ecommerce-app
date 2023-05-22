@@ -1,0 +1,11 @@
+django
+django-environ
+psycopg2
+pillow
+django-allauth
+django-anymail
+docker
+django-import-export
+pandas
+nginx
+gunicorn

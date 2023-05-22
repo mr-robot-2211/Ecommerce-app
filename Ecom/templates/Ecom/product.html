@@ -1,0 +1,35 @@
+
+{% extends "Ecom/base.html" %}
+{% for post in Post%}
+  <main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+
+      <div class="row wow fadeIn">
+
+        <div class="col-md-6 mb-4">
+
+          <span>{{post.image}}</span>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+
+          <div class="p-4">
+
+            <p class="lead">
+              <span>${{ post.price }}</span>
+            </p>
+
+            <p class="lead font-weight-bold">Description</p>
+
+            <p>{{ post.description }}</p>
+            <h3>{{ post. reviews }}</h3>
+            
+            <a href="{{ post.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p">
+              Add to cart
+              <i class="fas fa-shopping-cart ml-1"></i>
+            </a>
+            <a href="{{ post.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p">
+              Remove from cart
+            </a>
+  </main>
+{% endfor %}
